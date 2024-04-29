@@ -53,9 +53,14 @@
             </div>
           </li>
         </ul>
-        <p class="email-address">Email address</p>
-        <input type="email" placeholder="email@company.com" />
-        <button type="submit">Subscribe to monthly newsletter</button>
+        <div class="email-top">
+          <p class="email-address">Email address</p>
+          <p id="email-error">Valid email required</p>
+        </div>
+        <input type="email" id="email" placeholder="email@company.com" />
+        <button id="email-button" type="submit">
+          Subscribe to monthly newsletter
+        </button>
       </div>
       <div class="right-section">
         <img
@@ -64,5 +69,6 @@
         />
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
