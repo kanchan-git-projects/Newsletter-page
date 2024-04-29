@@ -70,11 +70,20 @@ ul {
   display: inline;
 }
 
-.email-address {
+.email-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   font-size: 0.7rem;
   color: hsl(234, 29%, 20%);
   font-weight: 600;
   margin-top: 1.5rem;
+}
+
+#email-error {
+  display: none;
+  color: hsl(4, 100%, 67%);
+  font-weight: 800;
 }
 
 .right-section {
@@ -93,6 +102,10 @@ input {
   border-radius: 5px;
 }
 
+input:active {
+  cursor: default;
+}
+
 button {
   color: white;
   padding: 0.9rem;
@@ -102,12 +115,79 @@ button {
   font-weight: 500;
 }
 
-@media only screen and (max-width: 700px) {
+button:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, rgb(247, 67, 157), hsl(4, 98%, 60%));
+}
+
+.page-wrapper {
+  animation: zoomIn 1s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 700px) {
   body {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    justify-content: initial;
+    align-items: center;
+    background-color: hsl(235, 18%, 26%);
+  }
 
+  .container {
+    flex-direction: column;
+    margin-inline: 5rem;
+    padding: 1rem;
+    width: 80%;
+  }
+
+  .mobile-image {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .mobile-image img {
+    width: 100%;
+    display: inline-block;
+    border-radius: 5%;
+  }
+
+  .left-section {
+    width: auto;
+    height: auto;
+    margin-inline: 1rem;
+    padding: 0 1rem;
+    margin: 0 1rem 1rem 1rem;
+  }
+
+  .left-section h1 {
+    padding-top: 1rem;
+  }
+
+  .right-section {
+    display: none;
+  }
+
+  .right-section img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    /* display: flex; */
+    flex-direction: column;
+    background-color: white;
     justify-content: initial;
   }
 
