@@ -120,6 +120,19 @@ button:hover {
   background: linear-gradient(to right, rgb(247, 67, 157), hsl(4, 98%, 60%));
 }
 
+.page-wrapper {
+  animation: zoomIn 1s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 @media only screen and (min-width: 376px) and (max-width: 700px) {
   body {
     display: flex;
